@@ -1,10 +1,12 @@
 import requests as req
 
+#Replace the string with your riot games API key
 def getAPIkey():
-    return 'RGAPI-8317b68d-0a23-4e85-9477-d180211bb886'
+    return 'RGAPI-YOUR-API-KEY'
 
+#Replace the string with your summoner name
 def getSummonerName():
-    return 'JackZet LM'
+    return 'Summoner Name'
 
 def getSummonerInfo():
     response = req.get(f"https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{getSummonerName()}?api_key={getAPIkey()}").json()
