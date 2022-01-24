@@ -7,6 +7,7 @@ app = Flask(__name__)
 def returnParticipantsExistingInCollection(participants, collection):
     
     encounteredPlayers = {}
+    
     for p in participants:
                 summonerName = p['summonerName']
                 col = collection.find({"summonerName": summonerName})
