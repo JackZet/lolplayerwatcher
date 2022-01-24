@@ -35,7 +35,12 @@ def update():
     
     if participants:
         encounteredPlayers = returnParticipantsExistingInCollection(participants, collection)
-        return buildHTML(encounteredPlayers)
+        
+        if len(encounteredPlayers) > 0:
+            return buildHTML(encounteredPlayers)
+        
+        return '<p>You have not met any of the summoners before</p>'    
+        
         
     else:
         return '<p>No active game currently</p>'
