@@ -23,7 +23,7 @@ def buildHTML(encounteredPlayers):
     html = ""
     
     for key, val in encounteredPlayers.items():
-        html = html + "<p>You have encountered " + key + " " + val + " times before<p>"
+        html = html + "<p>You have encountered " + key + " " + int(val) + " times before<p>"
     
     return html
 
